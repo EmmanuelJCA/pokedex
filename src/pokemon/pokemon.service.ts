@@ -23,6 +23,14 @@ export class PokemonService {
     }
   }
 
+  async createMany( createPokemonsDto: CreatePokemonDto[]) {
+    try {
+      const pokemons = await this.pokemonModel.insertMany(createPokemonsDto);
+    } catch(error) {
+      this.handleExceptions(error);
+    }
+  }
+
   findAll() {
     return `This action returns all pokemon`;
   }
@@ -52,6 +60,10 @@ export class PokemonService {
     if(deletedCount === 0)
       throw new BadRequestException(`Pokemon with id "${id}" not founf`);
     return;
+  }
+
+  async removeMany() {
+    return await this.pokemonModel.deleteMany({});
   }
 
   private handleExceptions(error: any) {

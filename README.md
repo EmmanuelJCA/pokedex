@@ -34,3 +34,8 @@ $ yarn run start:prod
 $ docker-compose up -d
 ```
 
+## Restore data from seed
+
+```
+http://localhost:3000/api/v2/seed
+```
