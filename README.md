@@ -14,6 +14,13 @@
 $ yarn install
 ```
 
+## Environment variables
+clone .env.template,
+rename copy to .env 
+set environment variables
+
+
+
 ## Running the app
 
 ```bash
@@ -36,6 +43,4 @@ $ docker-compose up -d
 
 ## Restore data from seed
 
-```
 http://localhost:3000/api/v2/seed
-```
